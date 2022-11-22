@@ -191,7 +191,7 @@ def start_the_game():
             if k == 1:
                 my_font = pygame.font.SysFont('Times', 20)
                 game_over_surface = my_font.render('You have eaten apple and reached new level and gain +{} score and '
-                                                   'speed'.format(k), True, globals.globals.red)
+                                                   'speed'.format(k), True, globals.red)
                 game_over_rect = game_over_surface.get_rect()
                 game_over_rect.midtop = (globals.window_x / 2, globals.window_y / 4)
                 game_window.blit(game_over_surface, game_over_rect)
@@ -202,7 +202,7 @@ def start_the_game():
                 my_font = pygame.font.SysFont('Times', 20)
                 game_over_surface = my_font.render(
                     'You have eaten pineapple and reached new level and gain +{} score and speed'.format(k), True,
-                    globals.globals.red)
+                    globals.red)
                 game_over_rect = game_over_surface.get_rect()
                 game_over_rect.midtop = (globals.window_x / 2, globals.window_y / 4)
                 game_window.blit(game_over_surface, game_over_rect)
@@ -286,9 +286,9 @@ def menu_r():
     menu.add.selector('Speed :',
                       [('Absolutely Hard', 20), ('Hard', 15), ('Medium', 10), ('Easy', 5), ('Elementary', 3)],
                       onchange=set_difficulty)
-    menu.add.selector('Snake Color :', [('globals.green', globals.green), ('globals.globals.red', globals.red)],
+    menu.add.selector('Snake Color :', [('green', globals.green), ('red', globals.red)],
                       onchange=set_color)
-    menu.add.selector('Window Color :', [('globals.black', globals.black), ('globals.yellow', globals.yellow)],
+    menu.add.selector('Window Color :', [('black', globals.black), ('yellow', globals.yellow)],
                       onchange=set_window)
     menu.add.button('Play', start_the_game)
     menu.add.button('Rating', show_rating)
